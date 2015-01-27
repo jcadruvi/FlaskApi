@@ -1,6 +1,7 @@
-from flask import Flask, jsonify
+from flask import jsonify
+import factories as server
 
-app = Flask(__name__)
+app = server.create_app()
 
 
 @app.route('/')
