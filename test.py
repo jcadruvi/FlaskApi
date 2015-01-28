@@ -1,5 +1,6 @@
-import unittest
 import FlaskApi
+import json
+import unittest
 
 class TestAPI(unittest.TestCase):
     def setUp(self):
@@ -11,14 +12,10 @@ class TestAPI(unittest.TestCase):
         pass
 
     def test_user_api(self):
-        json = self.app.get('/api/users')
-        print json.data
+        response = self.app.get('/api/users')
+        jsonResponse = json.loads(response.data)
+        print jsonResponse
 
 
 if __name__ == '__main__':
-#    app = create_app()
-#    print 'before app.run'
-#    app.run()
-#    print 'after app.run'
     unittest.main()
-#    print 'after unittest.main'
