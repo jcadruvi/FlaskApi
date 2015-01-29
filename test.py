@@ -19,7 +19,6 @@ class TestAPI(unittest.TestCase):
         self.assertTrue(len(users) > 0)
         self.assertTrue(users[0]["id"] is not None)
         self.assertTrue(users[0]["name"] is not None)
-        print json_response
 
 
 if __name__ == '__main__':
